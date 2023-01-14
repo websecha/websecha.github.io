@@ -1,53 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Репозиторий Работ</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<header class="hero">
-    <div class="logo-section">
-        <img class="logo-hero" src="img/sechlogo.png" alt="">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="logo-section">
+        <img class="logo-hero" src="img/sechlogo.png" alt="" />
         <a href="https://github.com/come0th3r/webProgrammingCourse">
-            <img class="github-hero" src="img/github.png" alt="">
+          <img class="github-hero" src="img/github.png" alt="" />
         </a>
-    </div>
-        <div id="particles-js">
-            <div class="text">
-                <h1 class="heading-hero">Репозиторий работ Web-Программирование</h1>
-                <h3 class="subtitle-hero">Студентов Сеченовского университета ИСГС</h3>
-                <h6 class="subtitle-hero">Преподаватель: Фартушный Эдуард Николаевич</h6>
-                <a href="#students" class="btn btn-primary btn-hero">Перейти к работам</a>
-            </div>
-            <div class="bottom-hero">
-                <p1 style="position: absolute;bottom: 1em;left: 2em;color: white;">2022-2023</p1>
-                <p1 style="position: absolute;bottom: 1em;right: 2em;color: white;">@0th3r</p1>
-            </div>
+      </div>
+      <div id="particles-js">
+        <div class="text">
+          <h1 class="heading-hero">Репозиторий работ Web-Программирование</h1>
+          <h3 class="subtitle-hero">
+            Студентов Сеченовского университета ИСГС
+          </h3>
+          <h6 class="subtitle-hero">
+            Преподаватель: Фартушный Эдуард Николаевич
+          </h6>
+          <a href="#students" class="btn btn-primary btn-hero"
+            >Перейти к работам</a
+          >
         </div>
-</header>
-<section class="works" id="students">
-    <div class="container text-center">
+        <div class="bottom-hero">
+          <p1 style="position: absolute; bottom: 1em; left: 2em; color: white"
+            >2022-2023</p1
+          >
+          <p1 style="position: absolute; bottom: 1em; right: 2em; color: white"
+            >@0th3r</p1
+          >
+        </div>
+      </div>
+    </header>
+    <section class="works" id="students">
+      <div class="container text-center">
         <div class="row">
-            <div class="col">
-                <div class="card">
-                </div>
-            </div>
+          <div class="col">
+            <div class="card"></div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="js/app.js"></script>
-<script type="text/javascript" src="js/json.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+    <template id="card-template">
+      <div class="col-6 p-3">
+        <div class="card rounded-0 border-primary">
+          <div class="card-header">
+            Группа: <span class="card-header__group"></span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <a href="" class="btn btn-primary btns">Личный Проект</a>
+            <a href="" class="btn btn-primary btns">Сайт с AI</a>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/json.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
