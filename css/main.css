@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+/*Настройки первой секции - Hero*/
+.hero {
+    height: 100%;
+}
+
+canvas{
+    display:block;
+    vertical-align:bottom;
+}
+
+#particles-js{
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background: #585f77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    text-align: center;
+}
+
+
+/* Элементы внутри div partical будут по центру если будет соблюдено условие - position: absolute; */
+.particles-js-canvas-el{
+    position: absolute;
+    object-fit: cover;
+}
+
+
+.logo-hero{
+    position: absolute;
+    left: 2em;
+    width: auto;
+    height: 56px;
+    margin-top: 1em;
+}
+
+.github-hero{
+    position: absolute;
+    right: 2em;
+    width: 56px;
+    height: auto;
+    margin-top: 1em;
+    z-index: 100
+}
+
+.text{
+    color: white;
+    z-index: 100;
+}
+
+
+.heading-hero{
+    font-weight: bold;
+}
+
+
+.subtitle-hero{
+    font-weight: lighter;
+}
+
+
+.btn-hero{
+    font-weight: bold;
+    font-size: large;
+    margin: 0.5em;
+}
+
+.bottom-hero{
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+}
+
+/* Настройка второй секции - Карточки*/
+
+/*Кнопка*/
+.works{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.btns {
+    margin: 0.5em 0.5em;
+    border-radius: 50px;
+}
+
