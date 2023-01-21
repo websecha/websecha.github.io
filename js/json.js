@@ -141,21 +141,37 @@ const valuesCards = [
     }
 ];
 
-let cardHTML = '';
-valuesCards.map(element => {
-    cardHTML += '<div class="col-6 p-3">\
-    <div class="card rounded-0 border-primary">\
-    <div class="card-header"> \
-    Группа: '+element.group+' \
-    </div> \
-    <div class="card-body"> \
-        <h5 class="card-title">'+element.name+'</h5> \
-        <a href="'+element.link1+'" class="btn btn-primary btns">Личный Проект</a> \
-        <a href="'+element.link2+'" class="btn btn-primary btns">Сайт с AI</a> \
-    </div> \
-    </div>\
-    </div>\
-      ';
-});
+const cardTemplate = document.getElementById('card-template');
 
-document.getElementsByClassName('row')[0].innerHTML = cardHTML;
+const createEmptyCard = () => {
+    const card = cardTemplate.content.firstElementChild.cloneNode(true);
+
+    return card;
+};
+
+const renderCards = (inputArray) => {
+    inputArray.map(element => {
+        const card = createEmptyCard();
+        const projectLink = card.querySelector('.project-link');
+        const siteLink = card.querySelector('.site-link');
+
+        card.querySelector('.card-header__group').textContent = element.group;
+        card.querySelector('.card-title').textContent = element.name;
+
+        if (element.link1 && element.link1 !== '') {
+            projectLink.href = element.link1;
+        } else {
+            projectLink.style.display = 'none';
+        }
+
+        if (element.link2 && element.link2 !== '') {
+            siteLink.href = element.link2;
+        } else {
+            siteLink.style.display = 'none';
+        }
+
+        document.querySelector('.row').append(card)
+    })
+}
+
+renderCards(valuesCards);
